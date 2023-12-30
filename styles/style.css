@@ -2,7 +2,12 @@
 :root {
     --primary-background: #272838;
     --primary-font: #F5F5F5;
+    --primary-accent: #4c6e96;
+    --hover-primary-accent: #F5F5F5;
+    --alternate-background: #5B4E6A;
+    --header-background: #272838;
 }
+
 /* *********** RESET ************* */
 * {
     padding: 0;
@@ -10,9 +15,27 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 /* *********** PAGE LEVEL STYLES ************* */
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-font);
-    background-color: var(--primary-background);
+    background: linear-gradient(
+        to right,
+        var(--primary-background),
+        var(--alternate-background)
+    );
+}
+
+a {
+    color: var(--primary-accent);
+}
+
+a:hover {
+    color: var(--hover-primary-accent);
+}
+
+/* *********** HEADER ************* */
+header {
+    background-color: var(--header-background);
 }
