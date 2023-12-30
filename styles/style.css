@@ -2,13 +2,17 @@
 :root {
     --primary-background: #272838;
     --primary-font: #F5F5F5;
-    --primary-accent: #4c6e96;
+    --primary-accent: #C9D5E4;
     --hover-primary-accent: #F5F5F5;
     --alternate-background: #5B4E6A;
     --header-background: #272838;
 }
 
 /* *********** RESET ************* */
+html {
+    font-size: 16px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -18,7 +22,7 @@
 
 /* *********** PAGE LEVEL STYLES ************* */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--primary-font);
     background: linear-gradient(
         to right,
@@ -27,15 +31,41 @@ body {
     );
 }
 
-a {
-    color: var(--primary-accent);
-}
-
-a:hover {
-    color: var(--hover-primary-accent);
-}
-
 /* *********** HEADER ************* */
 header {
     background-color: var(--header-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 780;
+    background: linear-gradient(90deg,#00dbde,#fc00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-menu-container {
+    list-style-type: none;
+    display: flex;
+    font-weight: 700;
+}
+
+.page-menu-item {
+    margin: 0.5rem;
+}
+
+.page-menu-link {
+    color: var(--primary-accent);
+    text-decoration: none;
+}
+
+.page-menu-link:hover {
+    color: var(--hover-primary-accent);
 }
