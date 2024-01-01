@@ -22,6 +22,7 @@ html {
 
 /* *********** PAGE LEVEL STYLES ************* */
 body {
+    min-width: 300px;
     font-family: 'Poppins', sans-serif;
     color: var(--primary-font);
     background: linear-gradient(
@@ -44,7 +45,7 @@ header {
 
 .logo {
     font-size: 3rem;
-    font-weight: 780;
+    font-weight: 790;
     background: linear-gradient(90deg,#00dbde,#fc00ff);
     background-clip: text;
     -webkit-background-clip: text;
@@ -58,7 +59,7 @@ header {
 }
 
 .page-menu-item {
-    margin: 0.5rem;
+    margin: 1.5rem;
 }
 
 .page-menu-link {
@@ -68,4 +69,14 @@ header {
 
 .page-menu-link:hover {
     color: var(--hover-primary-accent);
+}
+
+/* *********** Form ************* */
+.giphy-img {
+    margin: 10px;
+    border: 4px ridge black;
+}
+
+.giphy-form {
+    margin: 20px;
 }
