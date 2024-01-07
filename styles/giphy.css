@@ -33,7 +33,7 @@ body {
 }
 
 /* *********** HEADER ************* */
-header {
+.navbar {
     background-color: var(--header-background);
     display: flex;
     justify-content: space-between;
@@ -43,7 +43,7 @@ header {
     letter-spacing: 1px;
 }
 
-.logo {
+.navbar-brand {
     font-size: 3rem;
     font-weight: 790;
     background: linear-gradient(90deg,#00dbde,#fc00ff);
@@ -52,26 +52,33 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-.page-menu-container {
+.navbar-nav {
     list-style-type: none;
     display: flex;
+    font-size: 20px;
     font-weight: 700;
 }
 
-.page-menu-item {
+.nav-item {
     margin: 1.5rem;
 }
 
-.page-menu-link {
+.nav-link {
     color: var(--primary-accent);
     text-decoration: none;
 }
 
-.page-menu-link:hover {
+.nav-link:hover {
     color: var(--hover-primary-accent);
 }
 
 /* *********** Form ************* */
+.form-title {
+    margin-left: 650px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
 .giphy-img {
     margin: 10px;
     border: 4px ridge black;
@@ -79,4 +86,5 @@ header {
 
 .giphy-form {
     margin: 20px;
+    margin-top: 200px;
 }
