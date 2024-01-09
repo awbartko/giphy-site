@@ -32,7 +32,7 @@ body {
     );
 }
 
-/* *********** HEADER ************* */
+/* *********** HEADER AND FOOTER ************* */
 .navbar {
     background-color: var(--header-background);
     display: flex;
@@ -73,6 +73,35 @@ body {
 
 .navbar-toggler {
     background-color: #5B4E6A;
+}
+
+.page-footer {
+    color: var(--primary-accent);
+    background-color: var(--header-footer-background);
+}
+
+.page-footer {
+    padding: 2rem 1.5rem;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.footer-link-item {
+    margin: 0.5rem;
+}
+
+.page-menu-link {
+    color: var(--primary-accent);
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+.page-menu-link:hover {
+    color: var(--hover-primary-accent);
 }
 
 /* *********** Main ************* */
