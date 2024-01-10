@@ -5,7 +5,7 @@
     --primary-accent: #C9D5E4;
     --hover-primary-accent: #F5F5F5;
     --alternate-background: #5B4E6A;
-    --header-background: #272838;
+    --header-footer-background: #272838;
 }
 
 /* *********** RESET ************* */
@@ -18,6 +18,7 @@ html {
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* *********** PAGE LEVEL STYLES ************* */
@@ -30,11 +31,12 @@ body {
         var(--primary-background),
         var(--alternate-background)
     );
+    height: 100%;
 }
 
 /* *********** HEADER AND FOOTER ************* */
 .navbar {
-    background-color: var(--header-background);
+    background-color: var(--header-footer-background);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +83,15 @@ body {
 }
 
 .page-footer {
-    padding: 2rem 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.index-page-footer {
+    position: absolute, fixed;
 }
 
 .footer-links-container {
@@ -104,9 +114,37 @@ body {
     color: var(--hover-primary-accent);
 }
 
-/* *********** Main ************* */
+/* *********** BACK TO TOP ************* */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C9D5E4;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.back-to-top:hover {
+    background-color: transparent;
+    transform: translateY(-4px);
+}
+
+.back-to-top span {
+    font-size: 5rem;
+}
+
+/* *********** MAIN ************* */
 main {
     margin-top: 130px; /* fixed-top navbar */
+    min-height: vh;
 }
 
 p {
@@ -114,10 +152,14 @@ p {
 }
 
 .main-section {
-    padding: 1.5rem 1.5rem 2.5rem;
+    padding: 0 30px;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+    text-align: justify;
+    margin: 50px 0;
 }
 
-/* *********** Form ************* */
+/* *********** FORM ************* */
 .form-title {
     margin-bottom: 1.5rem;
     font-weight: 500;

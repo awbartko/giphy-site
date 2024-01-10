@@ -32,3 +32,7 @@ function renderData(response) {
 }
 
 document.querySelector(".js-giphy-form").addEventListener("submit", formSubmitted);
+
+function scrollToTop(){
+    window.scrollTo(0,0);
+}
