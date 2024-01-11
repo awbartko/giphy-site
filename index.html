@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./styles/giphy.css" />
   </head>
   <body>
+  <div class="full-screen">
     <header>
       <nav class="navbar navbar-expand-sm fixed-top">
         <div class="container-fluid">
@@ -52,58 +53,62 @@
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://awbartko.github.io/BusinessWebsite/"
-                  >Business Website</a
-                >
+                <a class="nav-link" href="#">Back To Search</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <form action="#" method="GET" class="js-giphy-form giphy-form">
-      <fieldset>
-        <legend
-          class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 form-title"
-        >
-          GIF Search
-        </legend>
-        <div class="mb-3 col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-          <label for="MemeTextInput" class="form-label"
-            >What are you looking for?</label
+    <main>
+      <form
+        action="#"
+        method="GET"
+        onsubmit="return checkforblank()"
+        class="js-giphy-form giphy-form"
+      >
+        <fieldset>
+          <legend
+            class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 form-title"
           >
-          <input
-            type="text"
-            id="memetextInput"
-            class="form-control"
-            placeholder="Enter Description"
-            name="memetextInput"
-            required
-          />
-        </div>
-        <div class="mb-3 col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-          <label for="numofGifsSelect" class="form-label">Number of GIFs</label>
-          <select
-            id="numofGifsSelect"
-            class="form-select"
-            name="numofGifsSelect"
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-          </select>
-        </div>
-        <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-          <button type="submit" class="btn btn-primary bg-gradient">
-            Submit
-          </button>
-        </div>
-      </fieldset>
-    </form>
+            GIF Search
+          </legend>
+          <div class="mb-3 col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            <label for="MemeTextInput" class="form-label"
+              >What are you looking for?</label
+            >
+            <input
+              type="text"
+              id="memetextInput"
+              class="form-control"
+              placeholder="Enter Description"
+              name="memetextInput"
+              required
+            />
+          </div>
+          <div class="mb-3 col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            <label for="numofGifsSelect" class="form-label">Number of GIFs</label>
+            <select
+              id="numofGifsSelect"
+              class="form-select"
+              name="numofGifsSelect"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            <button type="submit" class="btn btn-primary bg-gradient">
+              Submit
+            </button>
+          </div>
+          <div class="loader"></div>
+          <div class="wrapper"></div>
+        </fieldset>
+      </form>
     <footer class="page-footer index-page-footer">
       <nav>
         <ul class="footer-links-container">
@@ -116,10 +121,18 @@
             >
           </li>
           <li class="footer-link-item">
+            <a
+              href="https://awbartko.github.io/BusinessWebsite/"
+              class="page-menu-link"
+              >Business Website</a
+            >
+          </li>
+          <li class="footer-link-item">
             <a href="./privacy.html" class="page-menu-link">Privacy</a>
           </li>
         </ul>
       </nav>
+    </main>
     </footer>
     <a href="#">
       <span class="material-symbols-outlined back-to-top"> arrow_upward </span>
@@ -133,5 +146,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./giphy.js"></script>
+  </div>
   </body>
 </html>

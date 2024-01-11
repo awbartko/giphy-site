@@ -36,3 +36,10 @@ document.querySelector(".js-giphy-form").addEventListener("submit", formSubmitte
 function scrollToTop(){
     window.scrollTo(0,0);
 }
+
+function checkforblank() {
+    if (document.getElementById("memetextInput").value == " ") {
+        alert('Please remove whitespace at the beginning of description');
+        return false;
+    }
+}
