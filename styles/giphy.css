@@ -84,14 +84,14 @@ body {
 .page-footer {
     color: var(--primary-accent);
     background-color: var(--header-footer-background);
-}
-
-.page-footer {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.page-footer {
 }
 
 .full-screen {
