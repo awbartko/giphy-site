@@ -36,7 +36,6 @@ body {
         var(--primary-background),
         var(--alternate-background)
     );
-    min-height: 100%;
 }
 
 /* *********** HEADER AND FOOTER ************* */
