@@ -10,6 +10,10 @@ The technologies used for building this website are as follows: HTML, CSS, JavaS
 
 Future enhancements will include:
 
+- Adding a copy/paste feature for each gif generated
+- Listing the top searched gifs
+- A save to favorites feature
+
 ## User Stories
 
 ```
