@@ -1,11 +1,18 @@
 function formSubmitted(event) {
     event.preventDefault();
-    const memeText = document.querySelector("#memetextInput").value;
-    const memeCount = Number.parseInt(document.querySelector("#numofGifsSelect").value);
+    const memeText = document.querySelector("#meme-text-input").value;
+    const memeCount = Number.parseInt(document.querySelector("#num-of-gifs-select").value);
 
     getData(memeText, memeCount);
 
-    document.querySelector("#memetextInput").value = "";
+    document.querySelector("#meme-text-input").value = "";
+
+    let str = "   ";
+        if (str.trim().length === 0) {
+            console.log("The string is empty");
+        } else {
+            console.log("The string is not empty")
+        }
 }
 
 const API_KEY = "5NxphX0SS2z8aqxNX6ZxopPO2CL7pEzH";
@@ -35,11 +42,4 @@ document.querySelector(".js-giphy-form").addEventListener("submit", formSubmitte
 
 function scrollToTop(){
     window.scrollTo(0,0);
-}
-
-function checkforblank() {
-    if (document.getElementById("memetextInput").value == " ") {
-        alert('Please remove whitespace at the beginning of description');
-        return false;
-    }
 }
