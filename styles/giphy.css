@@ -95,6 +95,8 @@ body {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-link-item {
@@ -109,27 +111,6 @@ body {
 
 .page-menu-link:hover {
     color: var(--hover-primary-accent);
-}
-
-/* *********** LOADER ************* */
-.loader {
-    display: none;
-    height: 15rem;
-    width: 15rem;
-    border: 3rem solid #2b304d;
-    border-radius: 50%;
-    border-top-color: #13fc97;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    animation: spin 3s infinite;
-}
-
-@keyframes spin {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
 }
 
 /* *********** BACK TO TOP ************* */
@@ -183,8 +164,15 @@ p {
 }
 
 .giphy-img {
-    margin: 10px;
-    border: 4px ridge black;
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: #272838;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    height: 275px;
+    width: 300px;
 }
 
 .giphy-form {
@@ -204,5 +192,12 @@ p {
 @media screen and (max-width: 795px) {
     .navbar-nav {
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-links-container {
+        flex-direction: column;
+        align-items: center;
     }
 }

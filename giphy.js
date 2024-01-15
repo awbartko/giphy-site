@@ -32,7 +32,7 @@ function renderData(response) {
             <img 
             src="${image.images.original.url} 
             alt="${image.title}" 
-            class="giphy-img" />
+            class="giphy-img"/>
         `;
     }
     document.querySelector(".js-images").innerHTML = html
